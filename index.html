@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virtue Score Evaluator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 Virtue Score Evaluator</h1>
+
+    <!-- Section 1: Identity Input -->
+    <section id="section1">
+      <form id="identityForm">
+        <div class="input-group">
+          <label>Race:</label>
+          <select required>
+            <option>White</option>
+            <option>Black or African American</option>
+            <option>Asian</option>
+            <option>American Indian or Alaska Native</option>
+            <option>Native Hawaiian or Pacific Islander</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <!-- Repeat for all categories (Ethnicity, Religion, etc.) -->
+
+        <div class="input-group">
+          <label>Attitude Toward Authority:</label>
+          <select required>
+            <option>Skeptical</option>
+            <option>Respectful</option>
+            <option>Rebellious</option>
+          </select>
+        </div>
+
+        <button type="submit">Next</button>
+      </form>
+    </section>
+
+    <!-- Section 2: Consistency Check -->
+    <section id="section2" style="display: none;">
+      <form id="moralityCheckForm">
+        <h2>🧠 Moral Consistency Check</h2>
+
+        <label>Do you still give virtue points if someone disagrees with you ideologically?</label>
+        <select id="virtueDespiteDisagreement" required>
+          <option value="" disabled selected>– select an option –</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <div id="retractionOptions" style="display: none;">
+          <label>Which traits would you retract virtue for?</label>
+          <select id="traitRetractions" multiple>
+            <option value="race">Race</option>
+            <option value="ethnicity">Ethnicity</option>
+            <option value="religion">Religion</option>
+            <option value="gender">Gender</option>
+            <option value="sexualOrientation">Sexual Orientation</option>
+            <option value="age">Age</option>
+            <option value="financialStatus">Financial Status</option>
+            <option value="education">Education</option>
+            <option value="politics">Political Beliefs</option>
+            <option value="authority">Attitude Toward Authority</option>
+          </select>
+        </div>
+
+        <button type="submit">Next</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
